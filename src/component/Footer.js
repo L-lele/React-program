@@ -1,3 +1,4 @@
+import mario from '../icons_assets/Mario and Adrian b.jpg';
 export default function Footer() {
     const navLists= [
             {name: 'Home', url:''},
@@ -19,10 +20,9 @@ export default function Footer() {
         ];
 
     return <footer>
-        <img src="" alt="picture"/>
-        <div>
+        <img src={mario} alt="picture"/>
             <div>
-                <p>Doormat Navigation</p>
+                <p>Doormat <br />Navigation</p>
                 <ul>{navLists.map(element => {
         return <li><a href={element.url}>{element.name}</a></li>
     })}</ul>
@@ -35,6 +35,6 @@ export default function Footer() {
                 <ul>{social.map(element => {
         return <li><a href={element.url}>{element.name}</a></li>
     })}</ul></div>
-        </div>
+
     </footer>;
 }
